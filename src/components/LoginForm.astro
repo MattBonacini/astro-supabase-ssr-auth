@@ -1,0 +1,33 @@
+<form id="signin-form" action="/api/auth/signin" method="post">
+	<fieldset
+		class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box"
+	>
+		<legend class="fieldset-legend">Login</legend>
+
+		<p>
+			New here? <a class="link link-primary" href="/register"
+				>Create an account here</a
+			>, or <b>login with your LinkedIn account below.</b>
+		</p>
+
+		<label class="fieldset-label">Email</label>
+		<input
+			id="email"
+			name="email"
+			type="email"
+			class="input"
+			placeholder="Email"
+		/>
+
+		<label class="fieldset-label">Password</label>
+		<input
+			id="password"
+			type="password"
+			class="input"
+			name="password"
+			placeholder="Password"
+		/>
+
+		<button id="sign-in" class="btn btn-primary mt-4">Login</button>
+	</fieldset>
+</form>

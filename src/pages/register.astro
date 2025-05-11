@@ -1,0 +1,41 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout>
+	<div class="flex h-svh justify-center items-center">
+		<form action="/api/auth/register" method="post">
+			<fieldset
+				class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box"
+			>
+				<legend class="fieldset-legend">Register</legend>
+
+				<p>
+					Already have an account? <a href="/signin" class="link link-primary"
+						>Sign in</a
+					>
+				</p>
+
+				<label class="fieldset-label">Email</label>
+				<input
+					id="email"
+					name="email"
+					type="email"
+					class="input"
+					placeholder="Email"
+				/>
+
+				<label class="fieldset-label">Password</label>
+				<input
+					id="password"
+					type="password"
+					class="input"
+					name="password"
+					placeholder="Password"
+				/>
+
+				<button class="btn btn-primary mt-4" type="submit">Register</button>
+			</fieldset>
+		</form>
+	</div>
+</Layout>

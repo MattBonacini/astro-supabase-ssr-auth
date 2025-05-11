@@ -28,7 +28,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 	/**
 	 * List of all routes that don't require authentication
 	 */
-	const publicRoutes = ['/signin', '/api/auth/signin', '/api/auth/callback', '/api/auth/signin-linkedin', '/register', '/api/register'];
+	const publicRoutes = ['/signin', '/api/auth/signin', '/api/auth/callback', '/register', '/api/auth/register'];
 	if (publicRoutes.includes(url.pathname)) {
 		return next();
 	}
