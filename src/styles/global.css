@@ -2,5 +2,5 @@
 @plugin '@tailwindcss/typography';
 
 @plugin "daisyui" {
-	themes: light --default;
+	themes: winter --default;
 }
