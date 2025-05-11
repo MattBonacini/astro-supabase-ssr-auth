@@ -6,7 +6,7 @@ This starter template solves these problems. I found several discussions with Su
 
 NOTE: Oauth is currently configured to support LinkedIn. But this should work with any Oauth provider supported by [Supabase Auth](https://supabase.com/docs/guides/auth/social-login).
 
-If you're using Supabase (especially the self-hosted version) and Astro for the first time, it's easy to get confused about redirect URLs and .env variables, so I recommend reading the instructions included in this page carefully, and then review Supabase docs depending on the Oauth providers you plan to support.
+If you're using Supabase (especially the self-hosted version) and Astro for the first time, it's easy to get confused about redirect URLs and .env variables, so I recommend reading the instructions included in this page carefully, and then reviewing Supabase docs depending on the Oauth providers you plan to support.
 
 ## ⭐ Main Features
 
