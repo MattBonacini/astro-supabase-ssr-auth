@@ -1,16 +1,21 @@
 ---
-
+import Layout from './layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<main class="flex h-svh max-w-[400px] flex-col justify-center mx-auto">
+		<div
+			class="prose prose-sm dark:prose-invert prose-h1:font-bold prose-p:mb-2 space-y-4"
+		>
+			<h1>Welcome to Astro!</h1>
+			<p>This blog is a minimal Astro boilerplate with:</p>
+			<ul class="list-disc pl-5">
+				<li>Tailwind CSS</li>
+				<li>TypeScript</li>
+				<li>Supabase SSR</li>
+				<li>Supabase Auth</li>
+				<li>Node</li>
+			</ul>
+		</div>
+	</main>
+</Layout>
