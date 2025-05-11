@@ -4,7 +4,7 @@ Minimal starter boilerplate to use Astro with Supabase SSR, with Auth that actua
 
 This starter template solves these problems. I found several discussions with Supabase users that experienced the same issues and were stuck, so I hope this can help you save some hours of work with your next Astro & Supabase project.
 
-NOTE: I'm using this stack for building an app to create LinkedIn post, so Oauth is currently configured to support LinkedIn. But this should work with any Oauth provider supported by [Supabase Auth](https://supabase.com/docs/guides/auth/social-login).your
+NOTE: I'm using this stack for building an app to create LinkedIn post, so Oauth is currently configured to support LinkedIn. But this should work with any Oauth provider supported by [Supabase Auth](https://supabase.com/docs/guides/auth/social-login).
 
 If you're using Supabase (especially the self-hosted version) and Astro for the first time, it's easy to get confused about redirect URLs and .env variables, so I recommend reading the instructions included in this page carefully, and then review Supabase docs depending on the Oauth providers you plan to support.
 
@@ -22,7 +22,7 @@ If you're using Supabase (especially the self-hosted version) and Astro for the 
 
 1. Clone this repository
 2. Run `npm install`
-3. Edit .env.sample with the correct information of your Supabase project (or install if you self host Supabase), then rename it to .env
+3. Edit .env.sample with the correct information for your Supabase project (or install if you self host Supabase), then rename it to .env
 4. Run `npm run dev`
 5. Review the middleware file `src/middleware.ts` and set the routes that should be public in your project. Any route that isn't specified there will require authentication.
 6. Only in production, you must set the env variable LINKEDIN_OIDC_CALLBACK_URL to the URL where your users will be redirected after logging in with LinkedIn.
@@ -44,7 +44,7 @@ GOTRUE_EXTERNAL_LINKEDIN_OIDC_REDIRECT_URI=https://yoursupabaseaddress.com/auth/
 
 I recommend reading the comments in `src\lib\supabase.ts` to understand how to use Supabase SSR client in your codebase.
 
-⚠️ Warning: similar Github repositories don't init the Supabase client every time is used. I don't recommend this approach, as it currently causes all sorts of issues. The most frequent is that it logs users out multiple times per day. You need to init the Supabase SSR client every time your user interacts with the database. At this date, Supabase docs mention this only in their guide for NextJS but I think it's valid for Astro as well.
+⚠️ Warning: similar Github repositories don't init the Supabase client every time it's used. I don't recommend this approach, as it currently causes all sorts of issues. The most frequent is that it causes some errors and logs users out multiple times per day. You need to init the Supabase SSR client every time your user interacts with the database. At this date, Supabase docs mention this [only in their guide for NextJS](https://supabase.com/docs/guides/auth/server-side/nextjs?queryGroups=router&router=app) but I think it's valid for Astro as well.
 
 ## 🚀 Project Structure
 
