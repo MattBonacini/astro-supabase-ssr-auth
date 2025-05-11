@@ -1,5 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import MiniDashboard from '@components/MiniDashboard.astro';
+
+const locals = Astro.locals;
+const { user } = locals;
 ---
 
 <Layout>
@@ -11,11 +15,14 @@ import Layout from '@layouts/Layout.astro';
 			<p>This blog is a minimal Astro boilerplate with:</p>
 			<ul class="list-disc pl-5">
 				<li>Tailwind CSS</li>
+				<li>DaisyUI 5.0</li>
 				<li>TypeScript</li>
 				<li>Supabase SSR</li>
 				<li>Supabase Auth with PKCE flow</li>
 				<li>Node</li>
 			</ul>
+
+			{user && <MiniDashboard user={user} />}
 		</div>
 	</main>
 </Layout>

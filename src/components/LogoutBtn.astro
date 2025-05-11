@@ -1,0 +1,27 @@
+<div class="flex items-center gap-2">
+	<button id="sign-out" type="submit" class="btn-logout btn btn-sm">
+		<span>Logout</span>
+	</button>
+</div>
+
+<script>
+	import { actions } from 'astro:actions';
+	const signOutBtn = document.getElementById('sign-out') as HTMLButtonElement;
+
+	signOutBtn?.addEventListener('click', async (e) => {
+		e.preventDefault();
+		signOutBtn!.disabled = true;
+
+		try {
+			const results = await actions.signOut();
+
+			if (!results.data?.success) {
+				signOutBtn!.disabled = false;
+			}
+			return window.location.reload();
+		} catch (error) {
+			signOutBtn.disabled = false;
+			console.log(error);
+		}
+	});
+</script>

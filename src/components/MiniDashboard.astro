@@ -1,0 +1,20 @@
+---
+import LogoutBtn from './LogoutBtn.astro';
+
+const { user } = Astro.props;
+---
+
+<h2>You're logged in!</h2>
+<p>
+	<b>Email:</b>
+	{user?.email}
+</p>
+{
+	user?.user_metadata?.name && (
+		<p>
+			<b>Name:</b>
+			{user?.user_metadata?.name}
+		</p>
+	)
+}
+<LogoutBtn />
