@@ -11,7 +11,13 @@ import '../styles/global.css';
 		<title>Astro & Supabase SSR</title>
 	</head>
 	<body>
-		<slot />
+		<main class="flex h-svh max-w-[400px] flex-col justify-center mx-auto">
+			<div
+				class="prose prose-sm dark:prose-invert prose-h1:font-bold prose-p:mb-2 space-y-4"
+			>
+				<slot />
+			</div>
+		</main>
 	</body>
 </html>
 

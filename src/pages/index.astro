@@ -7,22 +7,16 @@ const { user } = locals;
 ---
 
 <Layout>
-	<main class="flex h-svh max-w-[400px] flex-col justify-center mx-auto">
-		<div
-			class="prose prose-sm dark:prose-invert prose-h1:font-bold prose-p:mb-2 space-y-4"
-		>
-			<h1>Welcome to Astro!</h1>
-			<p>This blog is a minimal Astro boilerplate with:</p>
-			<ul class="list-disc pl-5">
-				<li>Tailwind CSS</li>
-				<li>DaisyUI 5.0</li>
-				<li>TypeScript</li>
-				<li>Supabase SSR</li>
-				<li>Supabase Auth with PKCE flow</li>
-				<li>Node</li>
-			</ul>
+	<h1>Welcome to Astro!</h1>
+	<p>This blog is a minimal Astro boilerplate with:</p>
+	<ul class="list-disc pl-5">
+		<li>Tailwind CSS</li>
+		<li>DaisyUI 5.0</li>
+		<li>TypeScript</li>
+		<li>Supabase SSR</li>
+		<li>Supabase Auth with PKCE flow</li>
+		<li>Node</li>
+	</ul>
 
-			{user && <MiniDashboard user={user} />}
-		</div>
-	</main>
+	{user && <MiniDashboard user={user} />}
 </Layout>
