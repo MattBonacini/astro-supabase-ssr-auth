@@ -4,7 +4,7 @@ Minimal starter boilerplate to use Astro with Supabase SSR, with Auth that actua
 
 This starter template solves these problems. I found several discussions with Supabase users that experienced the same issues and were stuck, so I hope this can help you save some hours of work with your next Astro & Supabase project.
 
-NOTE: I'm using this stack for building an app to create LinkedIn post, so Oauth is currently configured to support LinkedIn. But this should work with any Oauth provider supported by [Supabase Auth](https://supabase.com/docs/guides/auth/social-login).
+NOTE: Oauth is currently configured to support LinkedIn. But this should work with any Oauth provider supported by [Supabase Auth](https://supabase.com/docs/guides/auth/social-login).
 
 If you're using Supabase (especially the self-hosted version) and Astro for the first time, it's easy to get confused about redirect URLs and .env variables, so I recommend reading the instructions included in this page carefully, and then review Supabase docs depending on the Oauth providers you plan to support.
 
